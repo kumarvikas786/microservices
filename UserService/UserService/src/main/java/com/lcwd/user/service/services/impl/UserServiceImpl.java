@@ -70,5 +70,6 @@ public class UserServiceImpl implements UserServices {
         }).collect(Collectors.toList());
         user.setRatings(ratingList);
         return user;
+
     }
 }

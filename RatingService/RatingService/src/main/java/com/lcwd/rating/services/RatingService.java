@@ -26,4 +26,5 @@ public interface RatingService {
     List<Rating> getRatingByHotelId(String hotelId);
 
     List<UserHotelRatingDTO> getUserIdAndHotelIdByRating(int rating);
+
 }

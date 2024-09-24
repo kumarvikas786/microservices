@@ -19,4 +19,5 @@ public class ApplicationExceptionHandler {
         var response = new ErrorResponse(HttpStatus.NOT_FOUND,404, ex.getMessage());
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
+
 }

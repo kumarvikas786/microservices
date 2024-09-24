@@ -36,6 +36,7 @@ public class RatingServiceImpl implements RatingService {
         return ratingRepo.findByHotelId(hotelId);
     }
 
+
     @Override
     public List<UserHotelRatingDTO> getUserIdAndHotelIdByRating(int rating) {
         List<Rating> ratings = ratingRepo.findByRating(rating);

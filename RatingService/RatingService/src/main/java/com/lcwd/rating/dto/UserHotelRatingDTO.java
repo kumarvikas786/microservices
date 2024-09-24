@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class UserHotelRatingDTO {
     private String userId;
     private String hotelId;
+
 }

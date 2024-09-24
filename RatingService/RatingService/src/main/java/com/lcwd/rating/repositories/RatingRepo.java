@@ -16,4 +16,5 @@ public interface RatingRepo extends MongoRepository<Rating,String> {
     List<Rating> findByHotelId(String hotelId);
 
     List<Rating> findByRating(int rating);
+
 }
