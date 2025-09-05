@@ -19,7 +19,7 @@ public class RatingController {
 
     @PostMapping("/create")
     public ResponseEntity<Rating> create(@RequestBody Rating rating){
-
+        System.out.println(rating.getHotelId());
         Rating createRating = ratingService.create(rating);
         return  new ResponseEntity<>(createRating, HttpStatus.CREATED);
     }

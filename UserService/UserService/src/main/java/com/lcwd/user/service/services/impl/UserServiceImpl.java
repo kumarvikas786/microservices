@@ -46,6 +46,8 @@ public class UserServiceImpl implements UserServices {
         return userRepository.findAll();
     }
 
+    //Here inside this method we are fetching the user info from that we are fetching list of
+    // rating given by user and from rating(inside rating hotel) we are fetching hotel details
     @Override
     public User getUser(String userId) {
         User user = userRepository.findById(userId)
@@ -59,7 +61,8 @@ public class UserServiceImpl implements UserServices {
             //api call to hotel service to get the hotel
 //            ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://HOTEL-SERVICE/hotels/"+rating.getHotelId(), Hotel.class);
 //            Hotel hotel = forEntity.getBody();
-            Hotel hotel = hotelService.getHotel(rating.getHotelId());
+            //using Feign client
+            Hotel hotel = hotelService.getHotel(rating.getHotelId()); 
 //            logger.info("response status code: {}",forEntity.getStatusCode());
             //set the hotel to rating
             rating.setHotel(hotel);

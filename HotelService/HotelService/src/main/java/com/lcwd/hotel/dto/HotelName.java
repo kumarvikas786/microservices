@@ -1,0 +1,17 @@
+package com.lcwd.hotel.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class HotelName {
+
+    private String hotelId;
+    private String location;
+    private String about;
+
+
+}
